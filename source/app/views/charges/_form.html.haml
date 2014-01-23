@@ -1,0 +1,6 @@
+= simple_form_for @charge do |f|
+  = f.association :customer, as: :select, collection: Lists.customers
+  = f.input :amount
+  = f.input :currency, as: :select, collection: Lists.currencies
+  .actions
+    = f.submit 'Save'
